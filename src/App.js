@@ -10,7 +10,7 @@ function App() {
 
     return (
         <div>
-            <Button label="按钮了吗" onClick={ww}>
+            <Button label="按钮了吗" onClick={ww} width="1200px">
                 <span>2</span>
             </Button>
 

@@ -1,13 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 
-function Button(props) {
+const StyledButton = styled.div`
+  width: ${({width}) => width || '80px'};
+  background-color: ${({theme}) =>theme.AA}
+`;
+
+function Button({onClick, label, children, width}) {
     return (
-        <div onClick={props.onClick}>
+        <StyledButton width={width} onClick={onClick}>
             <button>
-                {props.label}
+                {label}
             </button>
-            {props.children}
-        </div>
+            {children}
+        </StyledButton>
 
     )
 }
