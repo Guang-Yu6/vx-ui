@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Button from './button';
+import React from "react";
+import useColorSwitch from "./useColorSwitch";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [color, ww] = useColorSwitch();
+    const [color2, ww2] = useColorSwitch(" black", "blue");
+
+    return (
+        <div>
+            <Button label="按钮了吗" onClick={ww}>
+                <span>2</span>
+            </Button>
+
+            <p style={{color}}>文本</p>
+
+            <Button label="点我" onClick={ww2}/>
+
+            <p style={{color:color2}}>文本2</p>
+        </div>
+
+    )
+
 }
 
 export default App;
