@@ -8,7 +8,7 @@ const mi = (color, size = '8px') => css`  // 公共css 命名为 mi
     height: ${size};
     border-radius: 50%;
     background-color: ${color};
-`
+`;
 
 const StyledAca = styled.div`
   position: relative;
